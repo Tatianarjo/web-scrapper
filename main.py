@@ -4,7 +4,11 @@ from bs4 import BeautifulSoup
 with open("index.html", "r") as f:
     doc = BeautifulSoup(f, "html.parser")
     
-print(doc)
+# print(doc.prettify())
+tags = doc.find_all("p")
+
+print(tags)
+#Finding the tag by name
 
 # response = requests.get('https://www.zara.com/us/en/woman-outerwear-l1184.html?v1=2185970&regionGroupId=1')
 
